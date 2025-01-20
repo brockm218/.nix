@@ -307,6 +307,7 @@ in
     chromium
     inputs.zen-browser.packages."${system}".default
     vscode
+    yazi
   ];
 
   fonts = {
