@@ -19,6 +19,7 @@
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
     };
+    nixvim.url = "github:redyf/Neve";
   };
 
   outputs =

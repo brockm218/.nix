@@ -298,7 +298,7 @@ in
     pavucontrol
     tree
     spotify
-    neovide
+    # neovide
     greetd.tuigreet
     parsec-bin
     vesktop
@@ -306,6 +306,7 @@ in
     stremio
     chromium
     inputs.zen-browser.packages."${system}".default
+    inputs.nixvim.packages."${system}".default
     vscode
     yazi
   ];
