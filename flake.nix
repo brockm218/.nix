@@ -19,11 +19,15 @@
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
     };
-    nixvim.url = "github:redyf/Neve";
+    nixvim.url = "github:fred-drake/neovim";
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }@inputs:
+    {
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
       host = "nix-workstation";
@@ -34,7 +38,7 @@
         "${host}" = nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = {
-      	    # inherit system;
+            # inherit system;
             inherit inputs;
             inherit username;
             inherit host;
