@@ -308,7 +308,6 @@ in
     inputs.zen-browser.packages."${system}".default
     inputs.nixvim.packages."${system}".default
     vscode
-    yazi
   ];
 
   fonts = {
