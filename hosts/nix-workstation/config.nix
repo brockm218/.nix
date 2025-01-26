@@ -111,7 +111,6 @@ in {
   drivers.intel.enable = false;
   vm.guest-services.enable = false;
   local.hardware-clock.enable = false;
-  hardware.opengl.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
