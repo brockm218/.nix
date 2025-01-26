@@ -113,7 +113,6 @@ in {
       inherit pkgs;
       inherit host;
     })
-    pkgs.pokemmo-installer
   ];
 
   services = {
