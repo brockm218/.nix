@@ -6,11 +6,10 @@
   options,
   inputs,
   ...
-}:
-let
+}: let
   inherit (import ./variables.nix) keyboardLayout;
-in
-{
+  berkeley-mono = pkgs.callPackage ../../deriv/berkeley-mono.nix {inherit pkgs;};
+in {
   imports = [
     ./hardware.nix
     ./users.nix
@@ -26,8 +25,8 @@ in
     # Kernel
     kernelPackages = pkgs.linuxPackages_zen;
     # This is for OBS Virtual Cam Support
-    kernelModules = [ "v4l2loopback" ];
-    extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
+    kernelModules = ["v4l2loopback"];
+    extraModulePackages = [config.boot.kernelPackages.v4l2loopback];
     # Needed For Some Steam Games
     kernel.sysctl = {
       "vm.max_map_count" = 2147483642;
@@ -63,7 +62,7 @@ in
     #   base03 = "6e6a86";
     #   base04 = "908caa";
     #   base05 = "e0def4";
-    #   base06 = "e0def4";
+    #   base06 = "e0def4"
     #   base07 = "56526e";
     #   base08 = "eb6f92";
     #   base09 = "f6c177";
@@ -81,9 +80,8 @@ in
     cursor.size = 24;
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        # package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
-        name = "JetBrainsMono Nerd Font Mono";
+        package = berkeley-mono;
+        name = "Berkeley Mono";
       };
       sansSerif = {
         package = pkgs.montserrat;
@@ -103,8 +101,8 @@ in
   };
 
   # Extra Module Options
-  drivers.amdgpu.enable = true;
-  drivers.nvidia.enable = false;
+  drivers.amdgpu.enable = false;
+  drivers.nvidia.enable = true;
   drivers.nvidia-prime = {
     enable = false;
     intelBusID = "";
@@ -117,7 +115,7 @@ in
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = host;
-  networking.timeServers = options.networking.timeServers.default ++ [ "pool.ntp.org" ];
+  networking.timeServers = options.networking.timeServers.default ++ ["pool.ntp.org"];
 
   # Set your time zone.
   time.timeZone = "America/Chicago";
@@ -220,7 +218,7 @@ in
     _1password.enable = true;
     _1password-gui = {
       enable = true;
-      polkitPolicyOwners = [ "${username}" ];
+      polkitPolicyOwners = ["${username}"];
     };
     steam = {
       enable = true;
@@ -308,6 +306,7 @@ in
     inputs.zen-browser.packages."${system}".default
     inputs.nixvim.packages."${system}".default
     vscode
+    chatterino7
   ];
 
   fonts = {
@@ -320,7 +319,6 @@ in
       material-icons
     ];
   };
-
 
   environment.etc = {
     "1password/custom_allowed_browsers" = {
@@ -387,7 +385,7 @@ in
     fstrim.enable = true;
     gvfs.enable = true;
     openssh.enable = true;
-    flatpak.enable = false;
+    flatpak.enable = true;
     printing = {
       enable = true;
       drivers = [
@@ -411,15 +409,15 @@ in
     nfs.server.enable = false;
   };
   systemd.services.flatpak-repo = {
-    path = [ pkgs.flatpak ];
+    path = [pkgs.flatpak];
     script = ''
       flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     '';
   };
   hardware.sane = {
     enable = true;
-    extraBackends = [ pkgs.sane-airscan ];
-    disabledDefaultBackends = [ "escl" ];
+    extraBackends = [pkgs.sane-airscan];
+    disabledDefaultBackends = ["escl"];
   };
 
   # Extra Logitech Support
@@ -464,8 +462,8 @@ in
         "nix-command"
         "flakes"
       ];
-      substituters = [ "https://hyprland.cachix.org" ];
-      trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
+      substituters = ["https://hyprland.cachix.org"];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
     };
     gc = {
       automatic = true;
