@@ -101,8 +101,8 @@ in {
   };
 
   # Extra Module Options
-  drivers.amdgpu.enable = false;
-  drivers.nvidia.enable = true;
+  drivers.amdgpu.enable = true;
+  drivers.nvidia.enable = false;
   drivers.nvidia-prime = {
     enable = false;
     intelBusID = "";

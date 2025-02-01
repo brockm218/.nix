@@ -22,44 +22,41 @@
     nixvim.url = "github:fred-drake/neovim";
   };
 
-  outputs =
-    {
-      nixpkgs,
-      home-manager,
-      ...
-    }@inputs:
-    let
-      system = "x86_64-linux";
-      host = "nix-workstation";
-      username = "beamic";
-    in
-    {
-      nixosConfigurations = {
-        "${host}" = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = {
-            # inherit system;
-            inherit inputs;
-            inherit username;
-            inherit host;
-          };
-          modules = [
-            ./hosts/${host}/config.nix
-            inputs.stylix.nixosModules.stylix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.extraSpecialArgs = {
-                inherit username;
-                inherit inputs;
-                inherit host;
-              };
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "backup";
-              home-manager.users.${username} = import ./hosts/${host}/home.nix;
-            }
-          ];
+  outputs = {
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    host = "thinkpad";
+    username = "beamic";
+  in {
+    nixosConfigurations = {
+      "${host}" = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          # inherit system;
+          inherit inputs;
+          inherit username;
+          inherit host;
         };
+        modules = [
+          ./hosts/${host}/config.nix
+          inputs.stylix.nixosModules.stylix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.extraSpecialArgs = {
+              inherit username;
+              inherit inputs;
+              inherit host;
+            };
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+            home-manager.users.${username} = import ./hosts/${host}/home.nix;
+          }
+        ];
       };
     };
+  };
 }
