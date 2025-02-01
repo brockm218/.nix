@@ -8,6 +8,7 @@
   ...
 }: let
   inherit (import ./variables.nix) keyboardLayout;
+  berkeley-mono = pkgs.callPackage ../../deriv/berkeley-mono.nix {inherit pkgs;};
 in {
   imports = [
     ./hardware.nix
@@ -61,7 +62,7 @@ in {
     #   base03 = "6e6a86";
     #   base04 = "908caa";
     #   base05 = "e0def4";
-    #   base06 = "e0def4";
+    #   base06 = "e0def4"
     #   base07 = "56526e";
     #   base08 = "eb6f92";
     #   base09 = "f6c177";
@@ -79,9 +80,11 @@ in {
     cursor.size = 24;
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
+        # package = pkgs.nerd-fonts.jetbrains-mono;
         # package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
-        name = "JetBrainsMono Nerd Font Mono";
+        # name = "JetBrainsMono Nerd Font Mono";
+        package = berkeley-mono;
+        name = "Berkeley Mono";
       };
       sansSerif = {
         package = pkgs.montserrat;
@@ -306,6 +309,7 @@ in {
     inputs.zen-browser.packages."${system}".default
     inputs.nixvim.packages."${system}".default
     vscode
+    chatterino7
   ];
 
   fonts = {
@@ -384,7 +388,7 @@ in {
     fstrim.enable = true;
     gvfs.enable = true;
     openssh.enable = true;
-    flatpak.enable = false;
+    flatpak.enable = true;
     printing = {
       enable = true;
       drivers = [
