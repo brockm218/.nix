@@ -28,7 +28,7 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    host = "thinkpad";
+    host = "nix-workstation";
     username = "beamic";
   in {
     nixosConfigurations = {
