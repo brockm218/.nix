@@ -24,8 +24,7 @@ in {
   boot = {
     # Kernel
     kernelPackages = pkgs.linuxPackages_zen;
-    # This is for OBS Virtual Cam Support
-    kernelModules = ["v4l2loopback"];
+    # This is for OBS Virtual Cam Support kernelModules = ["v4l2loopback"];
     extraModulePackages = [config.boot.kernelPackages.v4l2loopback];
     # Needed For Some Steam Games
     kernel.sysctl = {
@@ -309,6 +308,7 @@ in {
     inputs.zen-browser.packages."${system}".default
     inputs.nixvim.packages."${system}".default
     vscode
+    gfn-electron
     chatterino7
     spicetify-cli
   ];
@@ -466,8 +466,8 @@ in {
         "nix-command"
         "flakes"
       ];
-      substituters = ["https://hyprland.cachix.org"];
-      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+      substituters = ["https://hyprland.cachix.org" "https://eskea.cachix.org"];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="];
     };
     gc = {
       automatic = true;

@@ -91,7 +91,7 @@ in {
       gtk-application-prefer-dark-theme = 1;
     };
   };
-  qt = {
+  qt = lib.mkDefault {
     enable = true;
     style.name = "adwaita-dark";
     platformTheme.name = "gtk3";
