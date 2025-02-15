@@ -292,11 +292,19 @@
         "zig2nix": "zig2nix"
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1739561648,
         "narHash": "sha256-jMS5XLWs/arr9kCqK9SyhCtsVJkdfCFKBBGKkeuDPLc=",
         "owner": "ghostty-org",
         "repo": "ghostty",
         "rev": "228b4dbd60ea17577e78a3bb943cfa8dedf4e84b",
+=======
+        "lastModified": 1738076396,
+        "narHash": "sha256-EHGwh2do2JEcYHxaXBq1H7z/S2FkbHEpnNWhvgAmpJ8=",
+        "owner": "ghostty-org",
+        "repo": "ghostty",
+        "rev": "603639ad44e82afbcd8cdb01d7050abf7c538e9b",
+>>>>>>> parent of ca11482 (Updated flake, patched Berkeley Mono with nerd font glyphs, probably updated something else idk this commit has been staged for like two weeks and i keep adding to it.)
         "type": "github"
       },
       "original": {
@@ -428,11 +436,19 @@
         ]
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1739559906,
         "narHash": "sha256-iK5BXN5uDXVe76ssYTkFHl7oNZe+hhwcO3N7EN9yxqQ=",
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "9daae9a67af7b4d341e2c806fa274a9c0925d7cf",
+=======
+        "lastModified": 1738141609,
+        "narHash": "sha256-nGgZup+N1SZIBM0i90qjdxOx23wkJpHboqFmkDqN46k=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "0a64a209aa3c0e5ae528b9f25c3c5e9bb735dbb3",
+>>>>>>> parent of ca11482 (Updated flake, patched Berkeley Mono with nerd font glyphs, probably updated something else idk this commit has been staged for like two weeks and i keep adding to it.)
         "type": "github"
       },
       "original": {
@@ -539,11 +555,19 @@
     },
     "nixpkgs": {
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1739446958,
         "narHash": "sha256-+/bYK3DbPxMIvSL4zArkMX0LQvS7rzBKXnDXLfKyRVc=",
         "owner": "nixos",
         "repo": "nixpkgs",
         "rev": "2ff53fe64443980e139eaa286017f53f88336dd0",
+=======
+        "lastModified": 1737885589,
+        "narHash": "sha256-Zf0hSrtzaM1DEz8//+Xs51k/wdSajticVrATqDrfQjg=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "852ff1d9e153d8875a83602e03fdef8a63f0ecf8",
+>>>>>>> parent of ca11482 (Updated flake, patched Berkeley Mono with nerd font glyphs, probably updated something else idk this commit has been staged for like two weeks and i keep adding to it.)
         "type": "github"
       },
       "original": {
@@ -669,11 +693,19 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1739416463,
         "narHash": "sha256-EUow1fBSRALnznf4mRlvvKm0r2xN+DA4u3D1lxTrYtI=",
         "owner": "fred-drake",
         "repo": "neovim",
         "rev": "31b9afbc1931f1cbcd7d13f0408e1c94dc182c9c",
+=======
+        "lastModified": 1737388815,
+        "narHash": "sha256-PGee9QP2lwlbxSq3ZEGQ7atBFuT5ZlvfjNm0fwFCR4o=",
+        "owner": "fred-drake",
+        "repo": "neovim",
+        "rev": "0f05b2f131b6eb54bd7f96fd2e51eaba46e256bb",
+>>>>>>> parent of ca11482 (Updated flake, patched Berkeley Mono with nerd font glyphs, probably updated something else idk this commit has been staged for like two weeks and i keep adding to it.)
         "type": "github"
       },
       "original": {
@@ -782,11 +814,19 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1739375014,
         "narHash": "sha256-0fNbvZ1Dod4rDIfwGnC7CzJ3wRFSF1v5AvNCmNkVgXo=",
         "owner": "danth",
         "repo": "stylix",
         "rev": "e86de61bb8f5f2b6459d0be3e3291ad16db4b777",
+=======
+        "lastModified": 1738025638,
+        "narHash": "sha256-nU3JpvIeEmcDHzQK4OTD1KXSoL/GOff6j9kuSO4X8eM=",
+        "owner": "danth",
+        "repo": "stylix",
+        "rev": "55418e8fc8d4696af619176a22cefcfac56ad2ef",
+>>>>>>> parent of ca11482 (Updated flake, patched Berkeley Mono with nerd font glyphs, probably updated something else idk this commit has been staged for like two weeks and i keep adding to it.)
         "type": "github"
       },
       "original": {
@@ -949,11 +989,19 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1739546321,
         "narHash": "sha256-Gfi3JOoTWc/PlTJP2MY1bGkth+XEcTtPpVPqVakJWDQ=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
         "rev": "17ff1150dd9d356274823087d21130d76865635e",
+=======
+        "lastModified": 1738038026,
+        "narHash": "sha256-9Lm/QBT9ImIwtA6XzlHXsz/U5SN2+G3MIvjZQSxXYyc=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "555d5d3951f8bfae7a421928ec6402765980538c",
+>>>>>>> parent of ca11482 (Updated flake, patched Berkeley Mono with nerd font glyphs, probably updated something else idk this commit has been staged for like two weeks and i keep adding to it.)
         "type": "github"
       },
       "original": {

@@ -310,7 +310,6 @@ in {
     vscode
     gfn-electron
     chatterino7
-    spicetify-cli
   ];
 
   fonts = {
@@ -328,7 +327,7 @@ in {
     "1password/custom_allowed_browsers" = {
       text = ''
         brave
-            zen
+        zen
       '';
       mode = "0755";
     };

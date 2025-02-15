@@ -78,7 +78,6 @@ in {
   stylix.targets.waybar.enable = false;
   stylix.targets.rofi.enable = false;
   stylix.targets.hyprland.enable = false;
-  stylix.targets.spicetify.enable = true;
   gtk = {
     iconTheme = {
       name = "Papirus-Dark";
